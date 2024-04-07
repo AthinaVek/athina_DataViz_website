@@ -178,51 +178,86 @@
 
         <div class="section-title">
           <h2>Statistics</h2>
-          <p>I'm a software engineer currently pursuing my master's in Data, Information and Knowledge Managment.</p>
         </div>
 
         <div class="row" data-aos="fade-up">
           <div class="col-lg-3 d-flex justify-content-center" id="lottie-animation">
-            <!-- <div id="lottie-animation" class="mx-auto" style="width: 300px; height: 300px;"></div> -->
+          </div>
+          <div class="col-lg-3 d-flex justify-content-center" id="lottie-animation2">
+          </div>
+          <div class="col-lg-3 d-flex justify-content-center" id="lottie-animation3">
+          </div>
+          
           <script>
-              var animation = lottie.loadAnimation({
+            var animation = lottie.loadAnimation({
               container: document.getElementById('lottie-animation'),
               renderer: 'svg',
               loop: true,
               autoplay: true,
               path: 'Accountant.json'
             });
-            </script>
-          </div>
-          <div class="col-lg-3 d-flex justify-content-center" id="lottie-animation2">
-            <!-- <div id="lottie-animation" class="mx-auto" style="width: 300px; height: 300px;"></div> -->
-          <script>
-              var animation = lottie.loadAnimation({
+
+            var animationPlaying = true;
+            document.getElementById('lottie-animation').addEventListener('click', function() {
+              if (animationPlaying) {
+                animation.pause();
+                animationPlaying = false;
+              } else {
+                animation.play();
+                animationPlaying = true;
+              }
+            });
+          
+            var animation2 = lottie.loadAnimation({
               container: document.getElementById('lottie-animation2'),
               renderer: 'svg',
               loop: true,
               autoplay: true,
               path: 'Farmer.json'
             });
-            </script>
-          </div>
-          <div class="col-lg-3 d-flex justify-content-center" id="lottie-animation3">
-            <!-- <div id="lottie-animation" class="mx-auto" style="width: 300px; height: 300px;"></div> -->
-          <script>
-              var animation = lottie.loadAnimation({
+
+            var animation2Playing = true;
+            document.getElementById('lottie-animation2').addEventListener('click', function() {
+              if (animation2Playing) {
+                animation2.pause();
+                animation2Playing = false;
+              } else {
+                animation2.play();
+                animation2Playing = true;
+              }
+            });
+          
+            var animation3 = lottie.loadAnimation({
               container: document.getElementById('lottie-animation3'),
               renderer: 'svg',
               loop: true,
               autoplay: true,
               path: 'Infographics.json'
             });
-            </script>
-          </div>
+
+            var animation3Playing = true;
+            document.getElementById('lottie-animation3').addEventListener('click', function() {
+              if (animation3Playing) {
+                animation3.pause();
+                animation3Playing = false;
+              } else {
+                animation3.play();
+                animation3Playing = true;
+              }
+            });
+          </script>
         </div>
 
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-          
-          
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-10 d-flex" id="statistic">
+            <img src="./assets/img/statistics.png" class="img-fluid" alt="">
+          </div>
+        </div>
+        
+        <div class="analytics" style="margin-top: 50px;">
+          <p>
+            The bar chart depicts the disparity in average annual net earnings across EU and EEA countries, excluding Liechtenstein, based on Eurostat's 2022 data. A clear divide is evident, with Switzerland at the high end and Bulgaria at the low end, reflecting significant economic differences within Europe. 
+            These disparities highlight the varied economic strengths and living standards across the region.</p>
         </div>
 
       </div>
